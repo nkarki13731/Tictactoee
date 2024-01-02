@@ -43,12 +43,124 @@ class Fdemo extends Frame implements ActionListener{
     }
     @java.lang.Override
     public void actionPerformed(java.awt.event.ActionEvent e) {
+        // settifng button for newGame
         if(e.getSource() == b1){
             for(int i = 0; i < 9; i++ ){
                 b[i].setLabel("");
             }
             z = 0; z1 = 0; z2 =0; z3=0; z4=0; z5=0; z6=0; z7=0; z8=0;
         }
+
+        // setting other buttons as per the player input
+        if(e.getSource() == b[0] && z ==0);{
+            if(a%2==0){
+                b[0].setLabel("O");
+                a++;
+                z++;
+            }
+            else {
+                b[0].setLabel("X");
+                a++;
+                z++;
+            }
+        }
+        if(e.getSource() == b[1] && z1 ==0);{
+            if(a%2==0){
+                b[1].setLabel("O");
+                a++;
+                z++;
+            }
+            else {
+                b[1].setLabel("X");
+                a++;
+                z++;
+            }
+        }
+        if(e.getSource() == b[2] && z2 ==0);{
+            if(a%2==0){
+                b[2].setLabel("O");
+                a++;
+                z++;
+            }
+            else {
+                b[2].setLabel("X");
+                a++;
+                z++;
+            }
+        }
+        if(e.getSource() == b[3] && z3 ==0);{
+            if(a%2==0){
+                b[3].setLabel("O");
+                a++;
+                z++;
+            }
+            else {
+                b[3].setLabel("X");
+                a++;
+                z++;
+            }
+        }
+        if(e.getSource() == b[4] && z4 ==0);{
+            if(a%2==0){
+                b[4].setLabel("O");
+                a++;
+                z++;
+            }
+            else {
+                b[4].setLabel("X");
+                a++;
+                z++;
+            }
+        }
+        if(e.getSource() == b[5] && z5 ==0);{
+            if(a%2==0){
+                b[5].setLabel("O");
+                a++;
+                z++;
+            }
+            else {
+                b[5].setLabel("X");
+                a++;
+                z++;
+            }
+        }
+        if(e.getSource() == b[6] && z6 ==0);{
+            if(a%2==0){
+                b[6].setLabel("O");
+                a++;
+                z++;
+            }
+            else {
+                b[6].setLabel("X");
+                a++;
+                z++;
+            }
+        }
+        if(e.getSource() == b[7] && z7 ==0);{
+            if(a%2==0){
+                b[7].setLabel("O");
+                a++;
+                z++;
+            }
+            else {
+                b[7].setLabel("X");
+                a++;
+                z++;
+            }
+        }
+        if(e.getSource() == b[8] && z8 ==0);{
+            if(a%2==0){
+                b[8].setLabel("O");
+                a++;
+                z++;
+            }
+            else {
+                b[8].setLabel("X");
+                a++;
+                z++;
+            }
+        }
+
 
     }
 }
