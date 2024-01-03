@@ -1,15 +1,13 @@
 import java.awt.*;
 import  java.awt.event.*;
 class Fdemo extends Frame implements ActionListener {
-    Button b[][] = new Button[3][3];
-    //    Button b[] = new Button[9];
-    Button b1;
-    int k = 0;
-    int x = 8;
-    int y = 28;
-    int a = 0; //0 or X
-    int z = 0, z1 = 0, z2 = 0, z3 = 0, z4 = 0, z5 = 0, z6 = 0, z7 = 0, z8 = 0;
-    private Frame secondFrame;
+    private Button b[][] = new Button[3][3];
+    private Button b1;
+    private int k = 0;
+    private int x = 8;
+    private int y = 28;
+    private int a = 0; //0 or X
+    private int z = 0, z1 = 0, z2 = 0, z3 = 0, z4 = 0, z5 = 0, z6 = 0, z7 = 0, z8 = 0;
 
     Fdemo() {
         setLayout(null);
@@ -21,18 +19,18 @@ class Fdemo extends Frame implements ActionListener {
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                b[i][j] = new Button();
-                b[i][j].setSize(100, 100);
-                b[i][j].setLocation(x, y);
-                b[i][j].setFont(new Font("", Font.BOLD, 40));
-                add(b[i][j]);
-                b[i][j].addActionListener(this);
-                b[i][j].setBackground(new Color(255, 141, 28));//orange color
-                x+=100;
+                this.b[i][j] = new Button();
+                this.b[i][j].setSize(100, 100);
+                this.b[i][j].setLocation(x, y);
+                this.b[i][j].setFont(new Font("", Font.BOLD, 40));
+                this.add(b[i][j]);
+                this.b[i][j].addActionListener(this);
+                this.b[i][j].setBackground(new Color(255, 141, 28));//orange color
+                this.x+=100;
 
             }
-            x = 8;
-            y = y + 100;
+            this.x = 8;
+            this.y = y + 100;
 
         }
 //
@@ -53,135 +51,139 @@ class Fdemo extends Frame implements ActionListener {
 
 
 
-        b1 = new Button("New Game");
-        b1.setSize(150, 40);
-        b1.setLocation(500, 300);
-        b1.setFont(new Font("", Font.BOLD, 20));
+        this.b1 = new Button("New Game");
+        this.b1.setSize(150, 40);
+        this.b1.setLocation(500, 300);
+        this.b1.setFont(new Font("", Font.BOLD, 20));
 
-        add(b1);
-        b1.addActionListener(this);
+        this.add(b1);
+        this.b1.addActionListener(this);
     }
 
     @java.lang.Override
     public void actionPerformed(java.awt.event.ActionEvent e) {
         //settifng button for newGame
-        if(e.getSource() == b1){
+        if(e.getSource() == this.b1){
             for(int i = 0; i < 3; i++ ){
                 for(int j = 0 ; j<3; j++ ){
-                    b[i][j].setLabel("");
+                    this.b[i][j].setLabel("");
                 }
 
             }
-            z = 0; z1 = 0; z2 =0; z3=0; z4=0; z5=0; z6=0; z7=0; z8=0;
+            this.z = 0; this.z1 = 0; this.z2 =0; this.z3=0; this.z4=0; this.z5=0; this.z6=0; this.z7=0; this.z8=0;
         }
 
         // setting other buttons as per the player input
-        if(e.getSource() == b[0] && z ==0);{
-            if(a%2==0){
-                b[0].setLabel("O");
+        else if (e.getSource() == this.b[0][0] && this.z ==0) {
+            if(this.a%2==0){
+                this.b[0][0].setLabel("O");
+                this.a++;
+                this.z++;
+            }
+            else {
+                b[0][0].setLabel("X");
                 a++;
                 z++;
             }
+
+        }
+
+        else if  (e.getSource() == this.b[0][1] && this.z1 ==0){
+            if(this.a%2==0){
+                this.b[0][1].setLabel("O");
+                this.a++;
+                this.z++;
+            }
             else {
-                b[0].setLabel("X");
-                a++;
-                z++;
+                this.b[0][1].setLabel("X");
+                this.a++;
+                this.z++;
             }
         }
-        if(e.getSource() == b[1] && z1 ==0);{
-            if(a%2==0){
-                b[1].setLabel("O");
-                a++;
-                z++;
+
+
+        else if (e.getSource() == this.b[0][2] && this.z2 ==0){
+            if(this.a%2==0){
+                this.b[0][2].setLabel("O");
+                this.a++;
+                this.z++;
             }
             else {
-                b[1].setLabel("X");
-                a++;
-                z++;
+                this.b[0][2].setLabel("X");
+                this.a++;
+                this.z++;
             }
         }
-        if(e.getSource() == b[2] && z2 ==0);{
-            if(a%2==0){
-                b[2].setLabel("O");
-                a++;
-                z++;
+        else if(e.getSource() == this.b[1][0] && this.z3 ==0){
+            if(this.a%2==0){
+                this.b[1][0].setLabel("O");
+                this.a++;
+                this.z++;
             }
             else {
-                b[2].setLabel("X");
-                a++;
-                z++;
+                this.b[1][0].setLabel("X");
+                this.a++;
+                this.z++;
             }
         }
-        if(e.getSource() == b[3] && z3 ==0);{
-            if(a%2==0){
-                b[3].setLabel("O");
-                a++;
-                z++;
+        else if(e.getSource() == this.b[1][1] && this.z4 ==0){
+            if(this.a%2==0){
+                this.b[1][1].setLabel("O");
+                this.a++;
+                this.z++;
             }
             else {
-                b[3].setLabel("X");
-                a++;
-                z++;
+                this.b[1][1].setLabel("X");
+                this.a++;
+                this. z++;
             }
         }
-        if(e.getSource() == b[4] && z4 ==0);{
-            if(a%2==0){
-                b[4].setLabel("O");
-                a++;
-                z++;
+        else if(e.getSource() == this.b[1][2] && this.z5 ==0){
+            if(this.a%2==0){
+                this.b[1][2].setLabel("O");
+                this. a++;
+                this.z++;
             }
             else {
-                b[4].setLabel("X");
-                a++;
-                z++;
+                this.b[1][2].setLabel("X");
+                this.a++;
+                this.z++;
             }
         }
-        if(e.getSource() == b[5] && z5 ==0);{
-            if(a%2==0){
-                b[5].setLabel("O");
-                a++;
-                z++;
+        else if(e.getSource() == this.b[2][0] && this.z6 ==0){
+            if(this.a%2==0){
+                this.b[2][0].setLabel("O");
+                this.a++;
+                this.z++;
             }
             else {
-                b[5].setLabel("X");
-                a++;
-                z++;
+                this.b[2][0].setLabel("X");
+                this.a++;
+                this.z++;
             }
         }
-        if(e.getSource() == b[6] && z6 ==0);{
+         else if(e.getSource() == this.b[2][1] && this.z7 ==0){
             if(a%2==0){
-                b[6].setLabel("O");
-                a++;
-                z++;
+                this.b[2][1].setLabel("O");
+                this.a++;
+                this.z++;
             }
             else {
-                b[6].setLabel("X");
-                a++;
-                z++;
+                this.b[2][1].setLabel("X");
+                this.a++;
+                this.z++;
             }
         }
-        if(e.getSource() == b[7] && z7 ==0);{
-            if(a%2==0){
-                b[7].setLabel("O");
-                a++;
-                z++;
+        else if(e.getSource() == this.b[2][2] && this.z8 == 0){
+            if(this.a%2==0){
+                this.b[2][2].setLabel("O");
+                this.a++;
+                this.z++;
             }
             else {
-                b[7].setLabel("X");
-                a++;
-                z++;
-            }
-        }
-        if(e.getSource() == b[8] && z8 ==0);{
-            if(a%2==0){
-                b[8].setLabel("O");
-                a++;
-                z++;
-            }
-            else {
-                b[8].setLabel("X");
-                a++;
-                z++;
+                this.b[2][2].setLabel("X");
+                this.a++;
+                this. z++;
             }
         }
 
