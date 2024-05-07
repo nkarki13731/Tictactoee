@@ -339,3 +339,14 @@ class Fdemo extends Frame implements ActionListener {
 
     }
 }
+
+
+
+
+
+public class Ticktactoee {
+    public static void main(String[] args) {
+        Fdemo f = new Fdemo();
+
+    }
+}
