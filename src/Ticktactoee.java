@@ -3,19 +3,19 @@ import  java.awt.event.*;
 class Fdemo extends Frame implements ActionListener {
     private Button b[][] = new Button[3][3];
     private Button b1;
-    private int k = 0;
+//    private int k = 0;
     private int x = 8;
     private int y = 28;
     private int a = 0; //0 or X
     private int z = 0, z1 = 0, z2 = 0, z3 = 0, z4 = 0, z5 = 0, z6 = 0, z7 = 0, z8 = 0;
 
     Fdemo() {
-        setLayout(null);
-        setVisible(true);
-        setSize(800, 600);
-        setLocation(400, 100);
-        setBackground(Color.BLACK);
-        setForeground(Color.WHITE);
+        this.setLayout(null);
+        this. setVisible(true);
+        this.setSize(800, 600);
+        this.setLocation(400, 100);
+        this.setBackground(Color.BLACK);
+        this.setForeground(Color.WHITE);
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -74,7 +74,7 @@ class Fdemo extends Frame implements ActionListener {
         }
 
         // setting other buttons as per the player input
-        else if (e.getSource() == this.b[0][0] && this.z ==0) {
+        else if (e.getSource() == this.b[0][0] ) {
             if(this.a%2==0){
                 this.b[0][0].setLabel("O");
                 this.a++;
@@ -88,7 +88,7 @@ class Fdemo extends Frame implements ActionListener {
 
         }
 
-        else if  (e.getSource() == this.b[0][1] && this.z1 ==0){
+        else if  (e.getSource() == this.b[0][1] ){
             if(this.a%2==0){
                 this.b[0][1].setLabel("O");
                 this.a++;
@@ -102,7 +102,7 @@ class Fdemo extends Frame implements ActionListener {
         }
 
 
-        else if (e.getSource() == this.b[0][2] && this.z2 ==0){
+        else if (e.getSource() == this.b[0][2] ){
             if(this.a%2==0){
                 this.b[0][2].setLabel("O");
                 this.a++;
@@ -114,7 +114,7 @@ class Fdemo extends Frame implements ActionListener {
                 this.z++;
             }
         }
-        else if(e.getSource() == this.b[1][0] && this.z3 ==0){
+        else if(e.getSource() == this.b[1][0] ){
             if(this.a%2==0){
                 this.b[1][0].setLabel("O");
                 this.a++;
@@ -126,7 +126,7 @@ class Fdemo extends Frame implements ActionListener {
                 this.z++;
             }
         }
-        else if(e.getSource() == this.b[1][1] && this.z4 ==0){
+        else if(e.getSource() == this.b[1][1] ){
             if(this.a%2==0){
                 this.b[1][1].setLabel("O");
                 this.a++;
@@ -138,7 +138,7 @@ class Fdemo extends Frame implements ActionListener {
                 this. z++;
             }
         }
-        else if(e.getSource() == this.b[1][2] && this.z5 ==0){
+        else if(e.getSource() == this.b[1][2] ){
             if(this.a%2==0){
                 this.b[1][2].setLabel("O");
                 this. a++;
@@ -150,7 +150,7 @@ class Fdemo extends Frame implements ActionListener {
                 this.z++;
             }
         }
-        else if(e.getSource() == this.b[2][0] && this.z6 ==0){
+        else if(e.getSource() == this.b[2][0]){
             if(this.a%2==0){
                 this.b[2][0].setLabel("O");
                 this.a++;
@@ -162,7 +162,7 @@ class Fdemo extends Frame implements ActionListener {
                 this.z++;
             }
         }
-         else if(e.getSource() == this.b[2][1] && this.z7 ==0){
+         else if(e.getSource() == this.b[2][1] ){
             if(a%2==0){
                 this.b[2][1].setLabel("O");
                 this.a++;
@@ -174,7 +174,7 @@ class Fdemo extends Frame implements ActionListener {
                 this.z++;
             }
         }
-        else if(e.getSource() == this.b[2][2] && this.z8 == 0){
+        else if(e.getSource() == this.b[2][2] ){
             if(this.a%2==0){
                 this.b[2][2].setLabel("O");
                 this.a++;
