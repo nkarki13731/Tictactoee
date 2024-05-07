@@ -173,12 +173,24 @@ class Fdemo extends Frame implements ActionListener {
                 this.a++;
                 this. z8++;
             }
-        }
+        }}
 
+
+
+        Font f = new Font("",Font.BOLD,20);
+        if((b[0][0].getLabel() == b[0][1].getLabel() && b[0][0].getLabel() == b[0][2].getLabel())){
+            if(b[0][0].getLabel() == "O"){
+                Label winner = new Label("Player 1 won");
+                winner.setSize(150,50);
+                winner.setLocation(320,20);
+                winner.setFont(f);
+                add(winner);
+                this.start = 0;
+            }}
 
     }}
 
-}
+
 
 public class Ticktactoee {
     public static void main(String[] args) {
